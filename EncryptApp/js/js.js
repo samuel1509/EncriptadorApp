@@ -2,28 +2,69 @@
 var mensaje = document.getElementById("mensaje");
 var resultado = document.getElementById("resultado");
 
-//varaibles glrobales de los botones
+//varaibles globales de los botones
 var btnEncriptar = document.getElementById("btnEncriptar");
 var btnDesencriptar = document.getElementById("btnDesencriptar");
 var btnCopiar = document.getElementById("btnCopiar");
+/*
+Las "llaves" de encriptación que utilizaremos son las siguientes:
+La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+*/
 
-//convertir texto a minusuculas
+var letras=['a','e','i','o','u'];
+var llaves=['ai','enter','imes','ober','ufat'];
+
+
+var llavesEncriptacion = {
+  'a': 'ai',
+  'e': 'enter',
+  'i': 'imes',
+  'o': 'ober',
+  'u': 'ufat'
+};
+var llavesDesencriptacion = {
+  'ai': 'a',
+  'enter': 'e',
+  'imes': 'i',
+  'ober': 'o',
+  'ufat': 'u'
+};
+
+
+
+//convertir texto a minusuculas y permitir solo letras y espacio
 function convertirMinusculas() {
-  mensaje.value = mensaje.value.toLowerCase();
+  // Obtener el texto ingresado en el <textarea>
+  //solo minusculas y Elimina caracteres que no sean letras o espacio
+  var texto = mensaje.value.toLowerCase();
+  mensaje.value = texto.replace(/[^a-zA-Z ]/g, ''); 
 }
 
 //encripta el mensaje original y lo pega en el area resultado
 //elimina mensaje original
 function encriptar() {
-  resultado.value = mensaje.value;
-  mensaje.value = "";
+  var texto=mensaje.value;
+  resultado.value=texto.replace(/[aeiou]/g, function(match) {
+    return llavesEncriptacion[match];
+  });
+  console.log(resultado.value);
+  mensaje.value="";
 };
+
 
 //desencripta el mensaje encriptado y lo pega en el area resultado
 //elimina mensaje original
 function desencriptar() {
-  resultado.value = mensaje.value;
-  mensaje.value = "";
+  var texto=mensaje.value;
+  resultado.value=texto.replace(/ai|enter|imes|ober|ufat/g, function(match) {
+    return llavesDesencriptacion[match];
+  });
+  console.log(resultado.value);
+  mensaje.value="";
 };
 
 // Copiar del mensaje resultado texto al portapapeles
@@ -48,47 +89,3 @@ btnDesencriptar.addEventListener("click", desencriptar);
 
 //enlazar funcion copiar con el boton copiar
 btnCopiar.addEventListener("click", copiarAlPortapapeles);
-
-
-
-
-//copia el resultado encriptado como nuevo mensaje en el campo mensaje
-/*function copiar(){
-  var mensaje = document.getElementById("mensaje");
-  var resultado=document.getElementById("resultado");
-  mensaje.value=resultado.value;
-}*/
-
-/*
-Las "llaves" de encriptación que utilizaremos son las siguientes:
-
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-
-Requisitos:
-
-Debe funcionar solo con letras minúsculas
-
-No deben ser utilizados letras con acentos ni caracteres especiales
-
-Debe ser posible convertir una palabra para la versión encriptada también 
-devolver una palabra encriptada para su versión original.
-
-Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
-
-La página debe tener campos parainserción del texto que será encriptado o 
-desencriptado, y el usuario debe poder escoger entre as dos opciones.
-
-El resultado debe ser mostrado en la pantalla.
-
-Extras:
-
-Un botón que copie el texto encriptado/desencriptado para la sección de 
-transferencia, o sea que tenga la misma funcionalidad del ctrl+C 
-o de la opción "copiar" del menú de las aplicaciones.
-*/
