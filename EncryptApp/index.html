@@ -8,23 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\reset.css">
     <link rel="stylesheet" href="css\estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
   </head>
   <body>
    <header>
-    <h1> logo </h1>
-    <h1>ENCRIPTADOR</h1>
+    <h1> <img src="img/logo.jpg" alt="Logo"> </h1>
+    <h1>ENCRIPTADOR DE MENSAJES</h1>
    </header>
    <main>
     <div>
       
       <form action="" method="post">
         <label for="mensaje">Ingrese mensaje: </label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" 
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" autofocus
         placeholder="Ingrese mensaje a encriptar/desencriptar"></textarea>
         <label >ingresar el mensaje en minusculas</label>
-        <button type="button"> Encriptar</button>
-        <button type="button">Desencriptar</button>
+
+        <button type="button" name="btnEncriptar" id="btnEncriptar"> Encriptar</button>
+        <button type="button" name="btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
+        <button type="button" name="btnCopiar" id="btnCopiar">Copiar resultado</button>
       </form>
+      <textarea name="resultado" id="resultado" cols="30" rows="10" disabled readonly
+      placeholder="Sin mensaje para mostrar"></textarea></textarea>
     </div>
    </main>
    <footer>
@@ -32,6 +39,6 @@
    </footer> 
    
   </body>
-  <script src=""></script>
+  <script src="js/js.js"></script>
 </html>
 
