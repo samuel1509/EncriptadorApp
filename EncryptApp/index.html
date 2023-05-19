@@ -8,36 +8,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\reset.css">
     <link rel="stylesheet" href="css\estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   </head>
   <body>
    <header>
-    <h1> <img src="img/logo.jpg" alt="Logo"> </h1>
-    <h1>ENCRIPTADOR DE MENSAJES</h1>
+      <h1>
+        <img src="img/Logo.png" alt="Logo" id="logo">
+        ENCRIPTADOR DE MENSAJES
+      </h1>
    </header>
    <main>
-    <div>
+      <div class="mensaje">
+        <form action="" method="post">
+          <label for="mensaje">Ingrese mensaje: </label>
+          <br>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="10" autofocus
+          placeholder="Ingrese mensaje a encriptar/desencriptar"></textarea>    
+          <br>
+          <label><img src="img/Signo.png" alt=""> Ingresar el mensaje en minusculas</label>
+          <div class="boton">
+            <button type="button" name="btnEncriptar" id="btnEncriptar"> Encriptar</button>
+            <button type="button" name="btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
+          </div>
+        </form>
+      </div>
       
+      <div class="resultado">
       <form action="" method="post">
-        <label for="mensaje">Ingrese mensaje: </label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" autofocus
-          placeholder="Ingrese mensaje a encriptar/desencriptar"></textarea>
-        <label >ingresar el mensaje en minusculas</label>
-
-        <button type="button" name="btnEncriptar" id="btnEncriptar"> Encriptar</button>
-        <button type="button" name="btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
-        <button type="button" name="btnCopiar" id="btnCopiar">Copiar resultado</button>
-      </form>
-      <textarea name="resultado" id="resultado" cols="30" rows="10" disabled readonly
+        <br>
+        <textarea name="resultado" id="resultado" cols="30" rows="10" disabled readonly
         placeholder="Sin mensaje para mostrar"></textarea></textarea>
-    </div>
+        <div class="boton">
+          <button type="button" name="btnCopiar" id="btnCopiar">Copiar resultado</button>
+        </div>
+      </form>
+      </div>
    </main>
    <footer>
-      <i class="fa fa-copyright" aria-hidden="false"> &copy; Cristian Aparicio - 2023</i> 
+      <h3> 
+        <img src="img/MiLogo.jpg" alt="MiLogo" id="miLogo"> 
+        Cristian Aparicio &copy; - 2023
+      </h3>
    </footer> 
-   
   </body>
   <script src="js/js.js"></script>
 </html>

@@ -1,5 +1,139 @@
 body {
-    font-family: 'Unbounded';
-    font-size: 75%;
-    
+    font-family: 'Righteous', cursive;
+    font-size: 50%;
+    background: linear-gradient(to right, grey, white,rgba(187, 238, 230, 0.678),rgb(58, 92, 124));   
+   
   }
+
+
+header{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+header h1{
+  font-weight: bold;
+  font-size: 4em;
+  color: #0A3871;
+  
+}
+
+#logo{
+  display: inline;
+  position: relative;
+  width: 120px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+/*------------------------------------*/
+main{
+  display:inline-flex;
+  align-items: center;
+  width:auto;
+}
+
+.mensaje{
+  position: relative;
+  margin: 50px;
+  width: 450px;
+}
+
+label{
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  color:#0A3871;
+}
+
+label img{
+  vertical-align: middle;
+}
+
+textarea{
+  background-color: rgba(214, 213, 219, 0.952);
+  color:#0A3871;
+  width: 400px;
+  height: 20em;
+  font-size: 2em;
+}
+
+.resultado{
+  position: relative;
+  align-items: left;
+  margin: 50px;
+  width: 450px;
+}
+
+.resultado textarea{
+  background-image:url("img/muñeco.png") ;
+}
+
+.boton{ 
+    width: auto;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center; 
+}
+
+.boton button{
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 2em;
+  border-color: goldenrod;
+  color: #0A3871;
+  background: goldenrod;
+}
+
+.boton button:hover{
+  border-color: #0A3871;
+  background:#0A3871;
+  color: goldenrod;
+  cursor: pointer;
+}
+
+/*------------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+footer h3{
+    font-size: 2em;
+    color: #0A3871;
+    
+}
+
+#miLogo{
+  display: inline;
+  position: relative;
+  width:30px;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
