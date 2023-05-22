@@ -128,6 +128,8 @@ footer h3{
 
 #insignia{
   width:50px;
+  border-radius: 5em;
+  vertical-align: middle;
 }
 
 @media screen and (max-width:480px){
