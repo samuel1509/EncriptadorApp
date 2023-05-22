@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Encriptador V1.0</title>
@@ -9,49 +10,57 @@
     <link rel="stylesheet" href="css\reset.css">
     <link rel="stylesheet" href="css\estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-  </head>
-  <body>
-   <header>
-      <h1>
-        <img src="img/Logo.png" alt="Logo" id="logo">
-        ENCRIPTADOR DE MENSAJES
-      </h1>
-   </header>
-   <main>
-      <div class="mensaje">
-        <form action="" method="post">
-          <label for="mensaje">Ingrese mensaje: </label>
-          <br>
-          <textarea name="mensaje" id="mensaje" cols="30" rows="10" autofocus
-          placeholder="Ingrese mensaje a encriptar/desencriptar"></textarea>    
-          <br>
-          <label><img src="img/Signo.png" alt=""> Ingresar el mensaje en minusculas</label>
-          <div class="boton">
-            <button type="button" name="btnEncriptar" id="btnEncriptar"> Encriptar</button>
-            <button type="button" name="btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
-          </div>
-        </form>
-      </div>
-      
-      <div class="resultado">
-      <form action="" method="post">
-        <br>
-        <textarea name="resultado" id="resultado" cols="30" rows="10" disabled readonly
-        placeholder="Sin mensaje para mostrar"></textarea></textarea>
-        <div class="boton">
-          <button type="button" name="btnCopiar" id="btnCopiar">Copiar resultado</button>
-        </div>
-      </form>
-      </div>
-   </main>
-   <footer>
-      <h3> 
-        <img src="img/MiLogo.jpg" alt="MiLogo" id="miLogo"> 
-        Cristian Aparicio &copy; - 2023
-      </h3>
-   </footer> 
-  </body>
-  <script src="js/js.js"></script>
-</html>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
 
+<body>
+    <header>
+        <nav>
+            <h1>
+                <img src="img/Logo.png" alt="Logo" id="logo">
+                ENCRIPTADOR DE MENSAJES
+            </h1>
+        </nav>
+    </header>
+    <main>
+        <section class="mensaje">
+            <form action="">
+                <label for="mensaje">
+                    Ingrese mensaje:
+                </label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" autofocus
+                    placeholder="Ingrese mensaje a encriptar/desencriptar"></textarea>
+                <label>
+                    <img src="img/Signo.png" alt="">
+                    Ingresar el mensaje en minusculas
+                </label>
+                <div class="boton">
+                    <button type="button" name="btnEncriptar" id="btnEncriptar">Encriptar</button>
+                    <button type="button" name="btnDesencriptar" id="btnDesencriptar">Desencriptar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="resultado">
+            <form action="" method="post">
+                <label for=""><br></label>
+                <textarea name="resultado" id="resultado" cols="30" rows="12" disabled readonly
+                    placeholder="Sin mensaje para mostrar"></textarea></textarea>
+                <label for=""><br><br></label>
+                <div class="boton">
+                    <button type="button" name="btnCopiar" id="btnCopiar">Copiar resultado</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>
+            <img src="img/MiLogo.jpg" alt="MiLogo" id="miLogo">
+            Cristian Aparicio &copy; - 2023
+        </h3>
+    </footer>
+</body>
+
+<script src="js/js.js"></script>
+
+</html>
